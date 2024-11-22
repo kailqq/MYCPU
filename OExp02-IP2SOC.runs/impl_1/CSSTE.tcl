@@ -123,6 +123,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
@@ -142,13 +143,12 @@ OPTRACE "add files" START { }
   add_files -quiet K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/synth_1/CSSTE.dcp
   read_ip -quiet K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/ip/RAM_B/RAM_B.xci
   read_ip -quiet K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
-  read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.edf
   read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.edf
-  read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SCPU.edf
-  read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.edf
   read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.edf
-  read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.edf
   read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Counter_x.edf
+  read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.edf
+  read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.edf
+  read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.edf
 OPTRACE "read constraints: implementation" START { }
   read_xdc K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc
 OPTRACE "read constraints: implementation" END { }

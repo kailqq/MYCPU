@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file K:\Computer_organization\OExp02-IP2SOC\OExp02-IP2SOC.runs\synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 没有权限

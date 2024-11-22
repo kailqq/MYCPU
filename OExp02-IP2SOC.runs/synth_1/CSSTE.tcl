@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -92,37 +93,34 @@ OPTRACE "Adding files" START { }
 add_files K:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/I_mem.coe
 add_files K:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/D_mem.coe
 add_files K:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/I_mem_lab4_3.coe
+add_files K:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/I_mem_lab4_4.coe
 read_verilog K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/SCPU_header.vh
 read_verilog -library xil_defaultlib {
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/ALU.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ALU_Ctrl.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/CSRRegs.v
   K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Counter_x.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Datapath.v
   K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/DisplaySync.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Hex2Ascii.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Immgen.v
   K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MC_14495.v
   K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SCPU.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Seg7_Dev.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/VGA.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/VgaController.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/VgaDebugger.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/VgaDisplay.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_display.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/UART.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/string_to_print.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_tx.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MyScpu.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Datapath.v
   K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MainCtrl.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MyScpu.v
   K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/PC.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ScpuCtrl.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ALU_Ctrl.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Immgen.v
-  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/ALU.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/RV_int.v
   K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/Regs.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ScpuCtrl.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Seg7_Dev.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/UART.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/string_to_print.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_display.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_tx.v
+  K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v
 }
 read_ip -quiet K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/ip/RAM_B/RAM_B.xci
 set_property used_in_implementation false [get_files -all k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/RAM_B/RAM_B_ooc.xdc]
@@ -130,13 +128,12 @@ set_property used_in_implementation false [get_files -all k:/Computer_organizati
 read_ip -quiet K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_ooc.xdc]
 
-read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.edf
 read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.edf
-read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SCPU.edf
-read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.edf
 read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.edf
-read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.edf
 read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Counter_x.edf
+read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.edf
+read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.edf
+read_edif K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.edf
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

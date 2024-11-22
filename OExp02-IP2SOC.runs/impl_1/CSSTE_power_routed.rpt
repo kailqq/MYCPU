@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Thu Nov  7 14:46:07 2024
+| Date             : Fri Nov 22 22:10:25 2024
 | Host             : Kailqq running 64-bit major release  (build 9200)
 | Command          : report_power -file CSSTE_power_routed.rpt -pb CSSTE_power_summary_routed.pb -rpx CSSTE_power_routed.rpx
 | Design           : CSSTE
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 51.356 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 29.067 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 50.558                           |
+| Dynamic (W)              | 28.270                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    14.215 |     7168 |       --- |             --- |
-|   LUT as Logic |    13.482 |     4385 |     63400 |            6.92 |
-|   CARRY4       |     0.405 |      108 |     15850 |            0.68 |
-|   F7/F8 Muxes  |     0.180 |      498 |     63400 |            0.79 |
-|   Register     |     0.112 |     1600 |    126800 |            1.26 |
-|   BUFG         |     0.036 |        6 |        32 |           18.75 |
-|   Others       |     0.000 |       23 |       --- |             --- |
-| Signals        |    19.403 |     6030 |       --- |             --- |
+| Slice Logic    |     6.745 |     7915 |       --- |             --- |
+|   LUT as Logic |     6.170 |     4887 |     63400 |            7.71 |
+|   CARRY4       |     0.373 |      108 |     15850 |            0.68 |
+|   Register     |     0.105 |     1789 |    126800 |            1.41 |
+|   F7/F8 Muxes  |     0.055 |      554 |     63400 |            0.87 |
+|   BUFG         |     0.042 |        7 |        32 |           21.88 |
+|   Others       |     0.000 |       25 |       --- |             --- |
+| Signals        |     8.578 |     6497 |       --- |             --- |
 | Block RAM      |     0.129 |        1 |       135 |            0.74 |
-| I/O            |    16.812 |       51 |       210 |           24.29 |
+| I/O            |    12.818 |       51 |       210 |           24.29 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    51.356 |          |           |                 |
+| Total          |    29.067 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    34.367 |      33.804 |      0.563 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.706 |       0.614 |      0.093 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     4.743 |       4.739 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    16.073 |      15.510 |      0.563 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.560 |       0.467 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     3.613 |       3.609 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,30 +140,32 @@ Table of Contents
 +-----------------------------------+-----------+
 | Name                              | Power (W) |
 +-----------------------------------+-----------+
-| CSSTE                             |    50.558 |
-|   U1                              |    20.106 |
-|     datapath_inst                 |    20.106 |
-|       U2                          |    16.477 |
-|       U3                          |     0.766 |
-|       U4                          |     2.356 |
-|   U10                             |     1.330 |
-|   U2                              |     4.213 |
-|     U0                            |     4.213 |
-|       synth_options.dist_mem_inst |     4.213 |
-|   U3                              |     0.924 |
-|     U0                            |     0.924 |
-|       inst_blk_mem_gen            |     0.924 |
-|   U4                              |     1.138 |
-|   U5                              |     0.429 |
-|   U6                              |     0.522 |
-|     U2                            |     0.522 |
-|   U8                              |     0.337 |
-|   U9                              |     0.055 |
-|     u1                            |     0.055 |
-|   uart_inst                       |     4.474 |
-|     uart_display                  |     4.314 |
-|       inst_string_to_print        |     2.584 |
-|       uart_inst                   |     0.384 |
+| CSSTE                             |    28.270 |
+|   U1                              |     6.734 |
+|     datapath_inst                 |     6.734 |
+|       U1                          |     1.760 |
+|       U2                          |     4.042 |
+|       U4                          |     0.310 |
+|       csrreg                      |     0.555 |
+|       trap                        |     0.060 |
+|   U10                             |     1.499 |
+|   U2                              |     2.314 |
+|     U0                            |     2.314 |
+|       synth_options.dist_mem_inst |     2.314 |
+|   U3                              |     0.819 |
+|     U0                            |     0.819 |
+|       inst_blk_mem_gen            |     0.819 |
+|   U4                              |     0.528 |
+|   U5                              |     0.177 |
+|   U6                              |     0.297 |
+|     U2                            |     0.297 |
+|   U8                              |     0.379 |
+|   U9                              |     0.060 |
+|     u1                            |     0.060 |
+|   uart_inst                       |     2.425 |
+|     uart_display                  |     2.270 |
+|       inst_string_to_print        |     1.108 |
+|       uart_inst                   |     0.408 |
 +-----------------------------------+-----------+
 
 

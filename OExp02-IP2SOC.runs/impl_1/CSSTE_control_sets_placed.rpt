@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Thu Nov  7 14:45:13 2024
+| Date         : Fri Nov 22 22:09:52 2024
 | Host         : Kailqq running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file CSSTE_control_sets_placed.rpt
 | Design       : CSSTE
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    62 |
-|    Minimum number of control sets                        |    62 |
+| Total control sets                                       |    68 |
+|    Minimum number of control sets                        |    68 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    96 |
+| Unused register locations in slices containing registers |    99 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    62 |
+| Total control sets |    68 |
 | >= 0 to < 4        |     8 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     2 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     1 |
-| >= 16              |    49 |
+| >= 16              |    55 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              73 |           38 |
-| No           | No                    | Yes                    |              68 |           25 |
-| No           | Yes                   | No                     |              61 |           19 |
-| Yes          | No                    | No                     |              96 |           52 |
-| Yes          | No                    | Yes                    |            1223 |          511 |
-| Yes          | Yes                   | No                     |              79 |           21 |
+| No           | No                    | No                     |              73 |           39 |
+| No           | No                    | Yes                    |              68 |           32 |
+| No           | Yes                   | No                     |              93 |           36 |
+| Yes          | No                    | No                     |              96 |           57 |
+| Yes          | No                    | Yes                    |            1383 |          577 |
+| Yes          | Yes                   | No                     |              76 |           22 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,68 +73,74 @@ Table of Contents
 +-----------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
 |      Clock Signal     |                       Enable Signal                       |                      Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
-|  U8/clkdiv_BUFG[9]    |                                                           |                                                           |                1 |              1 |         1.00 |
-|  U8/clkdiv_BUFG[9]    |                                                           | U9/rst                                                    |                1 |              1 |         1.00 |
 |  U8/clkdiv_BUFG[6]    |                                                           |                                                           |                1 |              1 |         1.00 |
 |  U8/clkdiv_BUFG[11]   |                                                           |                                                           |                1 |              1 |         1.00 |
 |  U8/clkdiv_BUFG[11]   |                                                           | U9/rst                                                    |                1 |              1 |         1.00 |
-|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/uart_inst/tx_clk[12]_i_1_n_1       |                                                           |                1 |              1 |         1.00 |
-|  U8/clkdiv_BUFG[6]    |                                                           | U9/rst                                                    |                2 |              2 |         1.00 |
+|  U8/clkdiv_BUFG[9]    |                                                           |                                                           |                1 |              1 |         1.00 |
+|  U8/clkdiv_BUFG[9]    |                                                           | U9/rst                                                    |                1 |              1 |         1.00 |
+|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/uart_inst/tx_clk[12]_i_1_n_2       |                                                           |                1 |              1 |         1.00 |
+|  U8/clkdiv_BUFG[6]    |                                                           | U9/rst                                                    |                1 |              2 |         2.00 |
 | ~U8/Clk_CPU_BUFG      |                                                           |                                                           |                3 |              3 |         1.00 |
-|  clk_100mhz_IBUF_BUFG |                                                           | uart_inst/uart_display/uart_inst/tx_clk[12]_i_1_n_1       |                4 |              5 |         1.25 |
-| ~U8/Clk_CPU_BUFG      | U10/counter_Ctrl                                          | U9/rst                                                    |                2 |              6 |         3.00 |
-|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/FSM_onehot_print_state_reg_n_1_[2] |                                                           |                7 |              7 |         1.00 |
+|  clk_100mhz_IBUF_BUFG |                                                           | uart_inst/uart_display/uart_inst/tx_clk[12]_i_1_n_2       |                4 |              5 |         1.25 |
+| ~U8/Clk_CPU_BUFG      | U10/counter_Ctrl                                          | U9/rst                                                    |                3 |              6 |         2.00 |
+|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/FSM_onehot_print_state_reg_n_2_[2] |                                                           |                6 |              7 |         1.17 |
 |  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/uart_inst/tx_bits_remaining        |                                                           |                3 |             10 |         3.33 |
-|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/FSM_onehot_print_state[13]_i_1_n_1 |                                                           |                3 |             14 |         4.67 |
-|  clk_100mhz_IBUF_BUFG | U9/u1/sw[15]_i_1_n_0                                      |                                                           |                5 |             16 |         3.20 |
-|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/char_wait_count                    | uart_inst/uart_display/FSM_onehot_print_state_reg_n_1_[2] |                5 |             18 |         3.60 |
+|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/FSM_onehot_print_state[13]_i_1_n_2 |                                                           |                4 |             14 |         3.50 |
+|  clk_100mhz_IBUF_BUFG | U9/u1/sw[15]_i_1_n_0                                      |                                                           |                7 |             16 |         2.29 |
+|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/char_wait_count                    | uart_inst/uart_display/FSM_onehot_print_state_reg_n_2_[2] |                5 |             18 |         3.60 |
 |  clk_100mhz_IBUF_BUFG |                                                           | uart_inst/uart_display/wait_count                         |                6 |             24 |         4.00 |
-|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/str_idx                            | uart_inst/uart_display/FSM_onehot_print_state_reg_n_1_[1] |                8 |             29 |         3.62 |
-|  U8/Clk_CPU_BUFG      | U4/GPIOf0000000_we                                        | U9/rst                                                    |               17 |             31 |         1.82 |
-|  clk_100mhz_IBUF_BUFG |                                                           |                                                           |               13 |             31 |         2.38 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[11][31]_i_1_n_1              | U9/rst                                                    |               16 |             32 |         2.00 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[13][31]_i_1_n_1              | U9/rst                                                    |               16 |             32 |         2.00 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[27][31]_i_1_n_1              | U9/rst                                                    |               17 |             32 |         1.88 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[30][31]_i_1_n_1              | U9/rst                                                    |               12 |             32 |         2.67 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[17][31]_i_1_n_1              | U9/rst                                                    |               10 |             32 |         3.20 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[31][31]_i_1_n_1              | U9/rst                                                    |               14 |             32 |         2.29 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[7][31]_i_1_n_1               | U9/rst                                                    |               11 |             32 |         2.91 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[6][31]_i_1_n_1               | U9/rst                                                    |               10 |             32 |         3.20 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[5][31]_i_1_n_1               | U9/rst                                                    |               15 |             32 |         2.13 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[9][31]_i_1_n_1               | U9/rst                                                    |               14 |             32 |         2.29 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[3][31]_i_1_n_1               | U9/rst                                                    |               14 |             32 |         2.29 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[4][31]_i_1_n_1               | U9/rst                                                    |               12 |             32 |         2.67 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[8][31]_i_1_n_1               | U9/rst                                                    |               10 |             32 |         3.20 |
-|  U8/Clk_CPU_BUFG      |                                                           | U9/rst                                                    |               13 |             32 |         2.46 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[10][31]_i_1_n_1              | U9/rst                                                    |               15 |             32 |         2.13 |
-| ~U8/Clk_CPU_BUFG      | U10/counter0_Lock                                         | U9/rst                                                    |                9 |             32 |         3.56 |
-| ~U8/Clk_CPU_BUFG      | U10/counter1_Lock                                         | U9/rst                                                    |               10 |             32 |         3.20 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[24][31]_i_1_n_1              | U9/rst                                                    |               15 |             32 |         2.13 |
-| ~U8/Clk_CPU_BUFG      | U10/counter2_Lock                                         | U9/rst                                                    |               14 |             32 |         2.29 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[19][31]_i_1_n_1              | U9/rst                                                    |               18 |             32 |         1.78 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[26][31]_i_1_n_1              | U9/rst                                                    |               12 |             32 |         2.67 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[20][31]_i_1_n_1              | U9/rst                                                    |               17 |             32 |         1.88 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[12][31]_i_1_n_1              | U9/rst                                                    |               18 |             32 |         1.78 |
-|  U8/clkdiv_BUFG[6]    | U10/counter0[31]                                          | U9/rst                                                    |                9 |             32 |         3.56 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[15][31]_i_1_n_1              | U9/rst                                                    |               10 |             32 |         3.20 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[28][31]_i_1_n_1              | U9/rst                                                    |               13 |             32 |         2.46 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[16][31]_i_1_n_1              | U9/rst                                                    |               13 |             32 |         2.46 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[18][31]_i_1_n_1              | U9/rst                                                    |               17 |             32 |         1.88 |
+|  clk_100mhz_IBUF_BUFG | uart_inst/uart_display/str_idx                            | uart_inst/uart_display/FSM_onehot_print_state_reg_n_2_[1] |                9 |             26 |         2.89 |
+|  U8/Clk_CPU_BUFG      | U4/GPIOf0000000_we                                        | U9/rst                                                    |               14 |             31 |         2.21 |
+|  clk_100mhz_IBUF_BUFG |                                                           |                                                           |               14 |             31 |         2.21 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[27][31]_i_1_n_2              | U9/rst                                                    |               14 |             32 |         2.29 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[21][31]_i_1_n_2              | U9/rst                                                    |               17 |             32 |         1.88 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[28][31]_i_1_n_2              | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[15][31]_i_1_n_2              | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[22][31]_i_1_n_2              | U9/rst                                                    |               18 |             32 |         1.78 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[29][31]_i_1_n_2              | U9/rst                                                    |               15 |             32 |         2.13 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[8][31]_i_1_n_2               | U9/rst                                                    |               10 |             32 |         3.20 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[9][31]_i_1_n_2               | U9/rst                                                    |               16 |             32 |         2.00 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[4][31]_i_1_n_2               | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[7][31]_i_1_n_2               | U9/rst                                                    |               11 |             32 |         2.91 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[3][31]_i_1_n_2               | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[31][31]_i_1_n_2              | U9/rst                                                    |               18 |             32 |         1.78 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[5][31]_i_1_n_2               | U9/rst                                                    |               10 |             32 |         3.20 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U1/E[0]                                  | U9/rst                                                    |               19 |             32 |         1.68 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U1/csrs[1][31]_i_8[0]                    | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[2][31]_i_1_n_2               | U9/rst                                                    |               16 |             32 |         2.00 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U1/csrs[1][31]_i_8_1[0]                  | U9/rst                                                    |               14 |             32 |         2.29 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U1/csrs[1][31]_i_8_2[0]                  | U9/rst                                                    |               14 |             32 |         2.29 |
+|  U8/Clk_CPU_BUFG      |                                                           | U9/rst                                                    |               21 |             32 |         1.52 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[13][31]_i_1_n_2              | U9/rst                                                    |               14 |             32 |         2.29 |
+| ~U8/Clk_CPU_BUFG      | U10/counter0_Lock                                         | U9/rst                                                    |               12 |             32 |         2.67 |
+| ~U8/Clk_CPU_BUFG      | U10/counter1_Lock                                         | U9/rst                                                    |                9 |             32 |         3.56 |
+| ~U8/Clk_CPU_BUFG      | U10/counter2_Lock                                         | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U1/csrs[1][31]_i_8_0[0]                  | U9/rst                                                    |               17 |             32 |         1.88 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[14][31]_i_1_n_2              | U9/rst                                                    |               20 |             32 |         1.60 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[19][31]_i_1_n_2              | U9/rst                                                    |               11 |             32 |         2.91 |
+|  U8/clkdiv_BUFG[6]    | U10/counter0[31]                                          | U9/rst                                                    |               10 |             32 |         3.20 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[26][31]_i_1_n_2              | U9/rst                                                    |               15 |             32 |         2.13 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[25][31]_i_1_n_2              | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[11][31]_i_1_n_2              | U9/rst                                                    |               12 |             32 |         2.67 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[17][31]_i_1_n_2              | U9/rst                                                    |               14 |             32 |         2.29 |
+|  n_1_227_BUFG         |                                                           | U9/rst                                                    |               17 |             32 |         1.88 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[30][31]_i_1_n_2              | U9/rst                                                    |               11 |             32 |         2.91 |
 |  clk_100mhz_IBUF_BUFG |                                                           | U9/rst                                                    |                8 |             32 |         4.00 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[21][31]_i_1_n_1              | U9/rst                                                    |               16 |             32 |         2.00 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[23][31]_i_1_n_1              | U9/rst                                                    |               13 |             32 |         2.46 |
-|  clk_100mhz_IBUF_BUFG |                                                           | uart_inst/clock_cnt[31]_i_1_n_1                           |                9 |             32 |         3.56 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[16][31]_i_1_n_2              | U9/rst                                                    |               12 |             32 |         2.67 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[10][31]_i_1_n_2              | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[6][31]_i_1_n_2               | U9/rst                                                    |               14 |             32 |         2.29 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[1][31]_i_1_n_2               | U9/rst                                                    |               11 |             32 |         2.91 |
 |  clk_100mhz_IBUF_BUFG | U9/u1/sw_counter[0]_i_1_n_0                               | U9/u1/sw_counter0_carry__0_n_2                            |                8 |             32 |         4.00 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[14][31]_i_1_n_1              | U9/rst                                                    |               13 |             32 |         2.46 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[2][31]_i_1_n_1               | U9/rst                                                    |               13 |             32 |         2.46 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[1][31]_i_1_n_1               | U9/rst                                                    |               15 |             32 |         2.13 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[22][31]_i_1_n_1              | U9/rst                                                    |               14 |             32 |         2.29 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[25][31]_i_1_n_1              | U9/rst                                                    |               12 |             32 |         2.67 |
-|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[29][31]_i_1_n_1              | U9/rst                                                    |               15 |             32 |         2.13 |
-|  U8/clkdiv_BUFG[9]    | U10/counter1[32]_i_1_n_0                                  | U9/rst                                                    |                9 |             33 |         3.67 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[12][31]_i_1_n_2              | U9/rst                                                    |               14 |             32 |         2.29 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[23][31]_i_1_n_2              | U9/rst                                                    |               11 |             32 |         2.91 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[20][31]_i_1_n_2              | U9/rst                                                    |               14 |             32 |         2.29 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[24][31]_i_1_n_2              | U9/rst                                                    |               13 |             32 |         2.46 |
+|  U8/Clk_CPU_BUFG      | U1/datapath_inst/U2/Reg_file[18][31]_i_1_n_2              | U9/rst                                                    |                9 |             32 |         3.56 |
+|  clk_100mhz_IBUF_BUFG |                                                           | uart_inst/clock_cnt[31]_i_1_n_2                           |                9 |             32 |         3.56 |
+|  U8/clkdiv_BUFG[9]    | U10/counter1[32]_i_1_n_0                                  | U9/rst                                                    |               10 |             33 |         3.30 |
 |  U8/clkdiv_BUFG[11]   | U10/counter2[32]_i_1_n_0                                  | U9/rst                                                    |               11 |             33 |         3.00 |
-|  n_0_689_BUFG         |                                                           |                                                           |               19 |             36 |         1.89 |
-| ~U8/Clk_CPU_BUFG      | U4/GPIOe0000000_we                                        |                                                           |               33 |             48 |         1.45 |
+|  n_0_1780_BUFG        |                                                           |                                                           |               19 |             36 |         1.89 |
+| ~U8/Clk_CPU_BUFG      | U4/GPIOe0000000_we                                        |                                                           |               36 |             48 |         1.33 |
 +-----------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
 
 

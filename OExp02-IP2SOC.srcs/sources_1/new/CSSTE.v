@@ -83,10 +83,17 @@ module CSSTE(
                 U1_b_val,
                 U1_pc_branch;
     wire [3:0] U1_alu_ctrl;
+
+    wire [31:0] U1_mstatus,
+                U1_mepc,
+                U1_mtval,
+                U1_mcause,
+                U1_mtvec;
     //
     MyScpu U1(
         .clk(U8_Clk_CPU),
         .rst(U9_rst),
+        .INT(U9_SW_OK[13]),
         .Data_in(U4_Cpu_data4bus),
         .inst_in(U2_spo),
         .MemRW(U1_MemRW),
@@ -114,7 +121,12 @@ module CSSTE(
         .a_val(U1_a_val),
         .b_val(U1_b_val),
         .pc_branch(U1_pc_branch),
-        .alu_ctrl(U1_alu_ctrl)
+        .alu_ctrl(U1_alu_ctrl),
+        .mstatus_o(U1_mstatus),
+        .mepc_o(U1_mepc),
+        .mtval_o(U1_mtval),
+        .mcause_o(U1_mcause),
+        .mtvec_o(U1_mtvec)
     );
     //
 
@@ -267,7 +279,12 @@ module CSSTE(
         .a_val(U1_a_val),
         .b_val(U1_b_val),
         .pc_branch(U1_pc_branch),
-        .alu_ctrl(U1_alu_ctrl)
+        .alu_ctrl(U1_alu_ctrl),
+        .mstatus_o(U1_mstatus),
+        .mepc_o(U1_mepc),
+        .mtval_o(U1_mtval),
+        .mcause_o(U1_mcause),
+        .mtvec_o(U1_mtvec)
          );
     //
 endmodule

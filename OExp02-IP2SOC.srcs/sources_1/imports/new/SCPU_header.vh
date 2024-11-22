@@ -91,6 +91,7 @@
 `define MEM2REG_PC_PLUS     `MEM2REG_WIDTH'd2
 `define MEM2REG_LUI         `MEM2REG_WIDTH'd3
 `define MEM2REG_AUIPC       `MEM2REG_WIDTH'd4
+`define MEM2REG_CSR         `MEM2REG_WIDTH'd5
 /*-----------------------------------*/
 
 /*AddressSel signals */

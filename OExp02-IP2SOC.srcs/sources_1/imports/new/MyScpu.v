@@ -25,6 +25,7 @@
 module MyScpu(
     input clk,
     input rst,
+    input INT,
     input MIO_ready,
     input [31:0] inst_in,
     input [31:0] Data_in,
@@ -55,7 +56,12 @@ module MyScpu(
     output reg       is_jal,
     output reg       is_jalr,
     output reg       do_branch,
-    output reg [31:0] pc_branch
+    output reg [31:0] pc_branch,
+    output reg [31:0] mstatus_o,
+    output reg [31:0] mepc_o,
+    output reg [31:0] mtval_o,
+    output reg [31:0] mcause_o,
+    output reg [31:0] mtvec_o
     );
 
 wire [2:0] ImmSel_tmp;
@@ -92,11 +98,28 @@ wire is_jal_tmp;
 wire is_jalr_tmp;
 wire do_branch_tmp;
 wire [31:0] pc_branch_tmp;
+wire [31:0] mstatus_tmp,
+            mtvec_tmp,
+            mcause_tmp,
+            mtval_tmp,
+            mepc_tmp;
+
+//
+wire [2:0] CSRTYPE_tmp;
+wire MRET_tmp;
+wire ECALL_tmp;
+wire illegal_tmp;  
+//
+
 
 ScpuCtrl ctrl_inst(
     .OPcode(inst_in[6:2]),
     .Fun3(inst_in[14:12]),
     .Fun7(inst_in[30]),
+    //
+    .Fun_ecall(inst_in[22:20]),
+    .Fun_mret(inst_in[29:28]),
+    //
     .MIO_ready(MIO_ready),
     .ImmSel(ImmSel_tmp),
     .ALUSrc_B(ALUSrc_B_tmp),
@@ -108,12 +131,20 @@ ScpuCtrl ctrl_inst(
     .ALU_Control(ALU_Control_tmp),
     .CPU_MIO(CPU_MIO_tmp),
     .signal(signal_tmp),
-    .width(width_tmp)
+    .width(width_tmp),
+     //
+    .CSRTYPE(CSRTYPE_tmp),
+    .MRET(MRET_tmp),
+    .ECALL(ECALL_tmp),
+    .illegal(illegal_tmp)
 );
 
 Datapath datapath_inst(
     .clk(clk),
     .rst(rst),
+    //
+    .INT(INT),
+    //
     .inst_field(inst_in),
     .data_in(Data_in),
     .ALU_Control(ALU_Control_tmp),
@@ -125,6 +156,13 @@ Datapath datapath_inst(
     .RegWrite(RegWrite_tmp),
     .signal(signal_tmp),
     .width(width_tmp),
+      //exception control signal
+    .MRET(MRET_tmp),
+    .ECALL(ECALL_tmp),
+    .illegal(illegal_tmp),
+    //CSRS signal
+    .CSRTYPE(CSRTYPE_tmp),
+    //
     `RegFile_Regs_Arguments
     .RAM_wt_bits(wt_bits_tmp),
     .Data_out(Data_out_tmp),
@@ -149,7 +187,12 @@ Datapath datapath_inst(
     .is_jal_tmp(is_jal_tmp),
     .is_jalr_tmp(is_jalr_tmp),
     .do_branch_tmp(do_branch_tmp),
-    .pc_branch_tmp(pc_branch_tmp)
+    .pc_branch_tmp(pc_branch_tmp),
+    .mstatus_tmp(mstatus_tmp),
+    .mtvec_tmp(mtvec_tmp),
+    .mcause_tmp(mcause_tmp),
+    .mtval_tmp(mtval_tmp),
+    .mepc_tmp(mepc_tmp)
     //debug signals
 );
 
@@ -180,6 +223,11 @@ always @(*) begin
     is_jalr = is_jalr_tmp;
     do_branch = do_branch_tmp;
     pc_branch = pc_branch_tmp;
+    mstatus_o = mstatus_tmp;
+    mtvec_o = mtvec_tmp;
+    mcause_o = mcause_tmp;
+    mtval_o = mtval_tmp;
+    mepc_o = mepc_tmp;
 end
 
 endmodule
