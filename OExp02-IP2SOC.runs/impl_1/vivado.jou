@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Nov  7 14:44:44 2024
+# Process ID: 7824
+# Current directory: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/impl_1
+# Command line: vivado.exe -log CSSTE.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CSSTE.tcl -notrace
+# Log file: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/impl_1/CSSTE.vdi
+# Journal file: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/impl_1\vivado.jou
+# Running On: Kailqq, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 12, Host memory: 16961 MB
+#-----------------------------------------------------------
+source CSSTE.tcl -notrace

@@ -1,0 +1,708 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Nov  7 14:41:18 2024
+# Process ID: 18436
+# Current directory: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/synth_1
+# Command line: vivado.exe -log CSSTE.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CSSTE.tcl
+# Log file: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/synth_1/CSSTE.vds
+# Journal file: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/synth_1\vivado.jou
+# Running On: Kailqq, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 12, Host memory: 16961 MB
+#-----------------------------------------------------------
+source CSSTE.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 471.918 ; gain = 185.828
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'k:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/IP/Seg7_Dev/Seg7_Dev.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado2023.2/Vivado/2023.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/utils_1/imports/synth_1/CSSTE.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/utils_1/imports/synth_1/CSSTE.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top CSSTE -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9732
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1333.832 ; gain = 439.633
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'U4_Cpu_data4bus', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:90]
+INFO: [Synth 8-11241] undeclared symbol 'U4_data_ram_we', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:125]
+INFO: [Synth 8-11241] undeclared symbol 'U4_ram_addr', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:126]
+INFO: [Synth 8-11241] undeclared symbol 'U4_ram_data_in', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:127]
+WARNING: [Synth 8-8895] 'U4_Cpu_data4bus' is already implicitly declared on line 90 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:133]
+WARNING: [Synth 8-8895] 'U4_ram_data_in' is already implicitly declared on line 127 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:134]
+WARNING: [Synth 8-8895] 'U4_ram_addr' is already implicitly declared on line 126 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:135]
+WARNING: [Synth 8-8895] 'U4_data_ram_we' is already implicitly declared on line 125 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:136]
+INFO: [Synth 8-11241] undeclared symbol 'U7_LED_out', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:150]
+INFO: [Synth 8-11241] undeclared symbol 'U10_counter_out', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:151]
+INFO: [Synth 8-11241] undeclared symbol 'U10_counter0_OUT', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:152]
+INFO: [Synth 8-11241] undeclared symbol 'U10_counter1_OUT', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:153]
+INFO: [Synth 8-11241] undeclared symbol 'U10_counter2_OUT', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:154]
+WARNING: [Synth 8-8895] 'U10_counter0_OUT' is already implicitly declared on line 152 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:167]
+WARNING: [Synth 8-8895] 'U10_counter1_OUT' is already implicitly declared on line 153 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:168]
+WARNING: [Synth 8-8895] 'U10_counter2_OUT' is already implicitly declared on line 154 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:169]
+WARNING: [Synth 8-8895] 'U10_counter_out' is already implicitly declared on line 151 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:170]
+INFO: [Synth 8-11241] undeclared symbol 'U7_counter_set', assumed default net type 'wire' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:179]
+WARNING: [Synth 8-8895] 'U7_counter_set' is already implicitly declared on line 179 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:224]
+WARNING: [Synth 8-8895] 'U7_LED_out' is already implicitly declared on line 150 [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:225]
+INFO: [Synth 8-6157] synthesizing module 'CSSTE' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SAnti_jitter' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.v:15]
+WARNING: [Synth 8-7071] port 'readn' of module 'SAnti_jitter' is unconnected for instance 'U9' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:27]
+WARNING: [Synth 8-7071] port 'Key_x' of module 'SAnti_jitter' is unconnected for instance 'U9' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:27]
+WARNING: [Synth 8-7071] port 'Key_out' of module 'SAnti_jitter' is unconnected for instance 'U9' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:27]
+WARNING: [Synth 8-7071] port 'Key_ready' of module 'SAnti_jitter' is unconnected for instance 'U9' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:27]
+WARNING: [Synth 8-7071] port 'pulse_out' of module 'SAnti_jitter' is unconnected for instance 'U9' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:27]
+WARNING: [Synth 8-7071] port 'CR' of module 'SAnti_jitter' is unconnected for instance 'U9' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:27]
+WARNING: [Synth 8-7023] instance 'U9' of module 'SAnti_jitter' has 13 connections declared, but only 7 given [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:27]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.v:15]
+INFO: [Synth 8-638] synthesizing module 'dist_mem_gen_0' [k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/dist_mem_gen_0/synth/dist_mem_gen_0.vhd:66]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 1024 - type: integer 
+	Parameter C_HAS_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_D bound to: 0 - type: integer 
+	Parameter C_HAS_DPO bound to: 0 - type: integer 
+	Parameter C_HAS_DPRA bound to: 0 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 1 - type: integer 
+	Parameter C_HAS_WE bound to: 0 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: dist_mem_gen_0.mif - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 1 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 32 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_14' declared at 'k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/dist_mem_gen_0/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3191' bound to instance 'U0' of component 'dist_mem_gen_v8_0_14' [k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/dist_mem_gen_0/synth/dist_mem_gen_0.vhd:132]
+INFO: [Synth 8-256] done synthesizing module 'dist_mem_gen_0' (0#1) [k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/dist_mem_gen_0/synth/dist_mem_gen_0.vhd:66]
+INFO: [Synth 8-6157] synthesizing module 'MyScpu' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MyScpu.v:25]
+INFO: [Synth 8-6157] synthesizing module 'ScpuCtrl' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ScpuCtrl.v:21]
+INFO: [Synth 8-6157] synthesizing module 'MainCtrl' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MainCtrl.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'MainCtrl' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MainCtrl.v:24]
+WARNING: [Synth 8-689] width (4) of port connection 'Branch' does not match port width (5) of module 'MainCtrl' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ScpuCtrl.v:60]
+INFO: [Synth 8-6157] synthesizing module 'ALU_ctrl' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ALU_Ctrl.v:24]
+INFO: [Synth 8-226] default block is never used [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ALU_Ctrl.v:32]
+INFO: [Synth 8-226] default block is never used [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ALU_Ctrl.v:47]
+INFO: [Synth 8-226] default block is never used [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ALU_Ctrl.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_ctrl' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ALU_Ctrl.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'ScpuCtrl' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ScpuCtrl.v:21]
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Datapath.v:25]
+INFO: [Synth 8-6157] synthesizing module 'Immgen' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Immgen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Immgen' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Immgen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Regs' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/Regs.v:1]
+WARNING: [Synth 8-324] index 0 out of range [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/Regs.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'Regs' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/Regs.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/PC.v:23]
+INFO: [Synth 8-226] default block is never used [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Datapath.v:122]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Datapath.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'MyScpu' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MyScpu.v:25]
+WARNING: [Synth 8-7071] port 'MIO_ready' of module 'MyScpu' is unconnected for instance 'U1' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:87]
+WARNING: [Synth 8-7071] port 'CPU_MIO' of module 'MyScpu' is unconnected for instance 'U1' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:87]
+WARNING: [Synth 8-7023] instance 'U1' of module 'MyScpu' has 62 connections declared, but only 60 given [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:87]
+INFO: [Synth 8-638] synthesizing module 'RAM_B' [k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/RAM_B/synth/RAM_B.vhd:69]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: RAM_B.mif - type: string 
+	Parameter C_INIT_FILE bound to: RAM_B.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 1 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.96495 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_7' declared at 'k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/RAM_B/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195208' bound to instance 'U0' of component 'blk_mem_gen_v8_4_7' [k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/RAM_B/synth/RAM_B.vhd:234]
+INFO: [Synth 8-256] done synthesizing module 'RAM_B' (0#1) [k:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.gen/sources_1/ip/RAM_B/synth/RAM_B.vhd:69]
+INFO: [Synth 8-6157] synthesizing module 'MIO_BUS' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.v:15]
+INFO: [Synth 8-6157] synthesizing module 'Counter_x' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Counter_x.v:15]
+INFO: [Synth 8-6157] synthesizing module 'Multi_8CH32' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.v:15]
+INFO: [Synth 8-6157] synthesizing module 'Seg7_Dev' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Seg7_Dev.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dispsync' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/DisplaySync.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dispsync' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/DisplaySync.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MC_14495' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MC_14495.v:23]
+INFO: [Synth 8-6157] synthesizing module 'INV' [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:78119]
+INFO: [Synth 8-6155] done synthesizing module 'INV' (0#1) [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:78119]
+INFO: [Synth 8-6157] synthesizing module 'AND4' [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1001]
+INFO: [Synth 8-6155] done synthesizing module 'AND4' (0#1) [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1001]
+INFO: [Synth 8-6157] synthesizing module 'OR4' [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:97028]
+INFO: [Synth 8-6155] done synthesizing module 'OR4' (0#1) [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:97028]
+INFO: [Synth 8-6157] synthesizing module 'AND3' [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:953]
+INFO: [Synth 8-6155] done synthesizing module 'AND3' (0#1) [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:953]
+INFO: [Synth 8-6157] synthesizing module 'OR3' [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:96980]
+INFO: [Synth 8-6155] done synthesizing module 'OR3' (0#1) [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:96980]
+INFO: [Synth 8-6157] synthesizing module 'AND2' [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:905]
+INFO: [Synth 8-6155] done synthesizing module 'AND2' (0#1) [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:905]
+INFO: [Synth 8-6157] synthesizing module 'OR2' [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:96934]
+INFO: [Synth 8-6155] done synthesizing module 'OR2' (0#1) [E:/vivado2023.2/Vivado/2023.2/scripts/rt/data/unisim_comp.v:96934]
+INFO: [Synth 8-6155] done synthesizing module 'MC_14495' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MC_14495.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Seg7_Dev' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Seg7_Dev.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SPIO' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.v:15]
+WARNING: [Synth 8-7071] port 'led_clk' of module 'SPIO' is unconnected for instance 'U7' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:227]
+WARNING: [Synth 8-7071] port 'led_sout' of module 'SPIO' is unconnected for instance 'U7' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:227]
+WARNING: [Synth 8-7071] port 'led_clrn' of module 'SPIO' is unconnected for instance 'U7' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:227]
+WARNING: [Synth 8-7071] port 'LED_PEN' of module 'SPIO' is unconnected for instance 'U7' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:227]
+WARNING: [Synth 8-7071] port 'GPIOf0' of module 'SPIO' is unconnected for instance 'U7' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:227]
+WARNING: [Synth 8-7023] instance 'U7' of module 'SPIO' has 12 connections declared, but only 7 given [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:227]
+INFO: [Synth 8-6157] synthesizing module 'UART' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/UART.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_display' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_display.v:23]
+INFO: [Synth 8-6157] synthesizing module 'string_to_print' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/string_to_print.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hex_to_ascii' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/string_to_print.v:1191]
+INFO: [Synth 8-6155] done synthesizing module 'hex_to_ascii' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/string_to_print.v:1191]
+INFO: [Synth 8-6155] done synthesizing module 'string_to_print' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/string_to_print.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_display.v:227]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_tx.v:52]
+	Parameter baud_rate bound to: 9600 - type: integer 
+	Parameter sys_clk_freq bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_tx.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'uart_display' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_display.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'UART' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/UART.v:23]
+WARNING: [Synth 8-7071] port 'cmp_ctrl' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'cmp_res' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'mem_ren' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'csr_wen' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'csr_ind' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'csr_ctrl' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'csr_r_data' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'mstatus_o' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'mcause_o' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'mepc_o' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'mtval_o' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'mtvec_o' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'mie_o' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7071] port 'mip_o' of module 'UART' is unconnected for instance 'uart_inst' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+WARNING: [Synth 8-7023] instance 'uart_inst' of module 'UART' has 75 connections declared, but only 61 given [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:238]
+INFO: [Synth 8-6155] done synthesizing module 'CSSTE' (0#1) [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/new/CSSTE.v:6]
+WARNING: [Synth 8-6014] Unused sequential element rst_char_wait_count_reg was removed.  [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_display.v:392]
+WARNING: [Synth 8-3848] Net is_transmitting in module/entity uart_display does not have driver. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_display.v:134]
+WARNING: [Synth 8-3848] Net rst_is_transmitting in module/entity uart_display does not have driver. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/Lab2-attachment/uart_display.v:134]
+WARNING: [Synth 8-7129] Port str_idx[11] in module string_to_print is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[31] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[30] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[29] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[28] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[27] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[26] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[25] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[24] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[23] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[22] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[21] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[20] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[19] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[18] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[17] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[16] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[15] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[14] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[13] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[12] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[11] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[10] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[9] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[8] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[7] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[6] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[5] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[4] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[3] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[2] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[1] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[0] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR_I in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR_I in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[9] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[8] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[7] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[6] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[5] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[4] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[3] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[2] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[1] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[0] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[35] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[34] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[33] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[32] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[31] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[30] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[29] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[28] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[27] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[26] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[25] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[24] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[23] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[22] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[21] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[20] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[19] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[18] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[17] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[16] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[15] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[14] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[13] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[12] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[11] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[10] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[9] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[8] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[7] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[6] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[5] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[4] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[3] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[2] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[1] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[0] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENB in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEB in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[3] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[2] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[1] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[9] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[8] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[7] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[6] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[5] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[4] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[3] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1705.836 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc]
+WARNING: [Vivado 12-584] No ports matched 'Red[0]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'Red[1]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'Red[2]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'Red[3]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'Green[0]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'Green[1]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'Green[2]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'Green[3]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'Blue[0]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'Blue[1]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'Blue[2]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'Blue[3]'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'HSYNC'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'VSYNC'. [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:77]
+Finished Parsing XDC File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/CSSTE_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CSSTE_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CSSTE_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1705.836 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  AND2 => LUT2: 1 instance 
+  AND3 => LUT3: 11 instances
+  AND4 => LUT4: 9 instances
+  INV => LUT1: 5 instances
+  OR2 => LUT2: 7 instances
+  OR3 => LUT3: 3 instances
+  OR4 => LUT4: 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1705.836 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U2. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'print_state_reg' in module 'uart_display'
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_wt_bits_reg' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Datapath.v:125]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_out_reg' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/Datapath.v:124]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              PRINT_IDLE |                   00000000000001 |                             0000
+          PRINT_STR_INIT |                   00000000000010 |                             0001
+       PRINT_SEND_CHAR_0 |                   00000000000100 |                             0010
+         PRINT_SEND_CHAR |                   00000000001000 |                             0011
+        PRINT_WAIT_RDY_0 |                   00000000010000 |                             0100
+          PRINT_WAIT_RDY |                   00000000100000 |                             0101
+         PRINT_CHAR_WAIT |                   00000001000000 |                             0110
+             PRINT_RESET |                   00000010000000 |                             1001
+ PRINT_RESET_SEND_CHAR_0 |                   00000100000000 |                             1010
+   PRINT_RESET_SEND_CHAR |                   00001000000000 |                             1011
+  PRINT_RESET_WAIT_RDY_0 |                   00010000000000 |                             1100
+    PRINT_RESET_WAIT_RDY |                   00100000000000 |                             1101
+        PRINT_DELAY_WAIT |                   01000000000000 |                             0111
+         PRINT_ROUND_END |                   10000000000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'print_state_reg' using encoding 'one-hot' in module 'uart_display'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 448   
+	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 33    
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 8     
+	  16 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 2     
+	   3 Input   14 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 8     
+	   4 Input   14 Bit        Muxes := 1     
+	  14 Input   14 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	  16 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 2     
+	  10 Input    4 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	  10 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 2     
+	  10 Input    2 Bit        Muxes := 3     
+	   7 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 37    
+	   4 Input    1 Bit        Muxes := 4     
+	  14 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:02:19 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------------+--------------------------------------------------------+---------------+----------------+
+|Module Name          | RTL Object                                             | Depth x Width | Implemented As | 
++---------------------+--------------------------------------------------------+---------------+----------------+
+|rom                  | rom[1023]                                              | 1024x31       | LUT            | 
+|dist_mem_gen_v8_0_14 | synth_options.dist_mem_inst/gen_rom.rom_inst/rom[1023] | 1024x31       | LUT            | 
++---------------------+--------------------------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:02:23 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:02:28 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:02:31 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U9 has unconnected pin readn
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:02:34 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:02:34 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:05 ; elapsed = 00:02:34 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:05 ; elapsed = 00:02:34 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:02:35 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:05 ; elapsed = 00:02:35 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |SAnti_jitter  |         1|
+|2     |clk_div       |         1|
+|3     |MIO_BUS       |         1|
+|4     |Counter_x     |         1|
+|5     |Multi_8CH32   |         1|
+|6     |SPIO          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |Counter_x_bbox    |     1|
+|2     |MIO_BUS_bbox      |     1|
+|3     |Multi_8CH32_bbox  |     1|
+|4     |SAnti_jitter_bbox |     1|
+|5     |SPIO_bbox         |     1|
+|6     |clk_div_bbox      |     1|
+|7     |AND2              |     1|
+|8     |AND3              |    11|
+|9     |AND4              |     9|
+|10    |BUFG              |     2|
+|11    |CARRY4            |    66|
+|12    |INV               |     5|
+|13    |LUT1              |    25|
+|14    |LUT2              |   243|
+|15    |LUT3              |   540|
+|16    |LUT4              |   622|
+|17    |LUT5              |   514|
+|18    |LUT6              |  2521|
+|19    |MUXF7             |   387|
+|20    |MUXF8             |    63|
+|21    |OR2               |     7|
+|22    |OR3               |     3|
+|23    |OR4               |     4|
+|24    |RAMB36E1          |     1|
+|25    |FDCE              |  1024|
+|26    |FDRE              |   155|
+|27    |LD                |    36|
+|28    |IBUF              |    22|
+|29    |OBUF              |    33|
++------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:05 ; elapsed = 00:02:35 . Memory (MB): peak = 1705.836 ; gain = 811.637
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 363 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:02:32 . Memory (MB): peak = 1705.836 ; gain = 811.637
+Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:02:35 . Memory (MB): peak = 1705.836 ; gain = 811.637
+INFO: [Project 1-571] Translating synthesized netlist
+Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.edf]
+Finished Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.edf]
+Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.edf]
+Finished Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.edf]
+Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.edf]
+Finished Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.edf]
+Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Counter_x.edf]
+Finished Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Counter_x.edf]
+Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.edf]
+Finished Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.edf]
+Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.edf]
+Finished Parsing EDIF File [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.edf]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1705.836 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 691 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1705.836 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 76 instances were transformed.
+  AND2 => LUT2: 1 instance 
+  AND3 => LUT3: 11 instances
+  AND4 => LUT4: 9 instances
+  INV => LUT1: 5 instances
+  LD => LDCE: 36 instances
+  OR2 => LUT2: 7 instances
+  OR3 => LUT3: 3 instances
+  OR4 => LUT4: 4 instances
+
+Synth Design complete | Checksum: 82e2fc33
+INFO: [Common 17-83] Releasing license: Synthesis
+107 Infos, 164 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:02:57 . Memory (MB): peak = 1705.836 ; gain = 1221.445
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1705.836 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/synth_1/CSSTE.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CSSTE_utilization_synth.rpt -pb CSSTE_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  7 14:44:36 2024...
