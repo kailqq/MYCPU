@@ -51,7 +51,7 @@ module CSSTE(
 
     //U2
     wire [31:0] U2_spo;
-    dist_mem_gen_0 U2(
+   dist_mem_gen_0 U2(
         .a(U1_PC_out[11:2]),
         .spo(U2_spo)
     );

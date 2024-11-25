@@ -5,32 +5,8 @@ Running: E:/vivado2023.2/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'Fun_mret' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MyScpu.v:111]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'Fun_mret' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/MyScpu.v:121]
 WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'Fun_mret' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ScpuCtrl.v:78]
 WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'Branch' [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/ScpuCtrl.v:85]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.MainCtrl
-Compiling module xil_defaultlib.ALU_ctrl
-Compiling module xil_defaultlib.ScpuCtrl
-Compiling module xil_defaultlib.CSRRegs
-Compiling module xil_defaultlib.RV_INT
-Compiling module xil_defaultlib.Immgen
-WARNING: [VRFC 10-3705] select index 0 into 'Reg_file' is out of bounds [K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/Regs.v:88]
-Compiling module xil_defaultlib.Regs
-Compiling module xil_defaultlib.ALU
-Compiling module xil_defaultlib.PC
-Compiling module xil_defaultlib.Datapath
-Compiling module xil_defaultlib.MyScpu
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7_output_stage(...
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7_softecc_outpu...
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7_mem_module(C_...
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7(C_FAMILY="art...
-Compiling module xil_defaultlib.RAM_B
-Compiling module xil_defaultlib.ROM_in_testbench
-Compiling module xil_defaultlib.testbench
-Compiling module xil_defaultlib.testbench_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot testbench_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

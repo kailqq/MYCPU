@@ -1,0 +1,2 @@
+ROMForCSR.v,verilog,xil_defaultlib,../../../../OExp02-IP2SOC.gen/sources_1/ip/ROMForCSR/sim/ROMForCSR.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

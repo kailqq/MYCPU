@@ -72,6 +72,8 @@ endmodule
 
 
 
+
+
 module ROM_for_CSR (
     input [9:0] addr,
     output [31:0] spo
@@ -100,15 +102,15 @@ initial begin
 // csrrwi x3 0x300 x2 #x3=0xFD,mstatus=0x02
 // csrrsi x3 0x300 x1 #x3=2,mstatus=3
 // csrrci x3 0x300 x1 #x3=3,mstatus=2
-	inst[0]=32'h0FE00093;
-	inst[1]=32'h300091F3;
-	inst[2]=32'h00100113;
-	inst[3]=32'h300121F3;
-	inst[4]=32'h00110113;
-	inst[5]=32'h300131F3;
-	inst[6]=32'h300151F3;
-	inst[7]=32'h3000E1F3;
-	inst[8]=32'h3000F1F3;
+// inst[0]=32'h0FE00093;
+// inst[1]=32'h300091F3;
+// inst[2]=32'h00100113;
+// inst[3]=32'h300121F3;
+// inst[4]=32'h00110113;
+// inst[5]=32'h300131F3;
+// inst[6]=32'h300151F3;
+// inst[7]=32'h3000E1F3;
+// inst[8]=32'h3000F1F3;
 end
 
 endmodule // ROM_for_CSR

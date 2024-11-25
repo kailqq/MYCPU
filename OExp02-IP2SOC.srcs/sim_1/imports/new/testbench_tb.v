@@ -33,8 +33,6 @@ module testbench_tb();
         rst = 1'b1;
         #5;
         rst = 1'b0;
-        #10;
-        INT = 1'b1;
     end
 
     always #5 clk = ~clk;

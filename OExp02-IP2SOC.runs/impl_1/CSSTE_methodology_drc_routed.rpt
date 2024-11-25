@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Fri Nov 22 22:10:23 2024
+| Date         : Sat Nov 23 15:39:46 2024
 | Host         : Kailqq running 64-bit major release  (build 9200)
 | Command      : report_methodology -file CSSTE_methodology_drc_routed.rpt -pb CSSTE_methodology_drc_routed.pb -rpx CSSTE_methodology_drc_routed.rpx
 | Design       : CSSTE
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1069
+             Violations found: 1037
 +-----------+------------------+--------------------------------+------------+
 | Rule      | Severity         | Description                    | Violations |
 +-----------+------------------+--------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell    | 1000       |
-| TIMING-20 | Warning          | Non-clocked latch              | 68         |
+| TIMING-20 | Warning          | Non-clocked latch              | 36         |
 | LATCH-1   | Advisory         | Existing latches in the design | 1          |
 +-----------+------------------+--------------------------------+------------+
 
@@ -5214,169 +5214,9 @@ Non-clocked latch
 The latch U1/datapath_inst/RAM_wt_bits_reg[3] cannot be properly analyzed as its control pin U1/datapath_inst/RAM_wt_bits_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#37 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[0] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#38 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[10] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#39 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[11] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[11]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#40 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[12] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[12]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#41 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[13] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[13]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#42 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[14] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[14]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#43 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[15] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[15]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#44 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[16] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[16]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#45 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[17] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[17]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#46 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[18] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[18]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#47 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[19] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[19]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#48 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[1] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#49 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[20] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[20]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#50 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[21] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[21]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#51 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[22] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[22]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#52 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[23] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[23]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#53 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[24] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[24]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#54 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[25] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[25]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#55 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[26] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[26]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#56 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[27] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[27]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#57 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[28] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[28]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#58 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[29] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[29]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#59 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[2] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#60 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[30] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[30]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#61 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[31] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[31]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#62 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[3] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#63 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[4] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#64 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[5] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#65 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[6] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#66 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[7] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#67 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[8] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#68 Warning
-Non-clocked latch  
-The latch U1/datapath_inst/trap/mtval_bypass_in_reg[9] cannot be properly analyzed as its control pin U1/datapath_inst/trap/mtval_bypass_in_reg[9]/G is not reached by a timing clock
-Related violations: <none>
-
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 68 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 36 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Nov 23 08:54:27 2024
+# Process ID: 5848
+# Current directory: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/ROMForCSR_synth_1
+# Command line: vivado.exe -log ROMForCSR.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ROMForCSR.tcl
+# Log file: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/ROMForCSR_synth_1/ROMForCSR.vds
+# Journal file: K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.runs/ROMForCSR_synth_1\vivado.jou
+# Running On: Kailqq, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 12, Host memory: 16961 MB
+#-----------------------------------------------------------
+source ROMForCSR.tcl -notrace
