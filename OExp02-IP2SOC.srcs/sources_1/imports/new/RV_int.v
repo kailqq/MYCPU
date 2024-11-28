@@ -29,8 +29,14 @@ module RV_INT(
     output reg [31:0]mtvec_bypass_in
 );
 
+wire wen;
 
-assign CSRregs_wen =(INT|ecall|illegal_inst|l_access_fault|j_access_fault|mret);//发生异常时需要写入CSR寄存器
+assign wen = (mstatus==0)?(INT|ecall|illegal_inst|l_access_fault|j_access_fault):0;//发生异常时需要写入CSR寄存器
+
+
+assign CSRregs_wen=wen|mret;//mret时需要写入CSR寄存器
+
+
 
 always @(*) begin
     if (rst) begin

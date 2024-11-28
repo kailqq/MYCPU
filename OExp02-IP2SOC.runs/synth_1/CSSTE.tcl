@@ -95,6 +95,7 @@ add_files K:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC
 add_files K:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/I_mem_lab4_3.coe
 add_files K:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/I_mem_lab4_4.coe
 add_files K:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/4_4_testbench.coe
+add_files k:/Computer_organization/Lab2-attachment/Lab2-attachment/OExp02-IP2SOC/lab44.coe
 read_verilog K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/new/SCPU_header.vh
 read_verilog -library xil_defaultlib {
   K:/Computer_organization/OExp02-IP2SOC/OExp02-IP2SOC.srcs/sources_1/imports/lab1_src/ALU.v
